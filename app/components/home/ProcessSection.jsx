@@ -6,44 +6,47 @@ import { TbDental } from "react-icons/tb";
 
 const processSteps = [
   {
-    icon: <FaRegClipboard className="text-[#1e84b5] w-7 h-7" />,
+    icon: <FaRegClipboard className="text-[#1e84b5]" size={48} />,
     title: "Initial Consultation",
     description:
-      "Your journey begins with an in-depth consultation. We'll listen to\nyour concerns, discuss your goals.",
+      "Your journey begins with an in-depth consultation. We'll listen to your concerns, discuss your goals.",
   },
   {
-    icon: <FaUserMd className="text-[#1e84b5] w-7 h-7" />,
+    icon: <FaUserMd className="text-[#1e84b5]" size={48} />,
     title: "Treatment By Experts",
     description:
-      "Once the plan is finalized, we'll proceed with your treatment. Our\nexpert team will guide you.",
+      "Once the plan is finalized, we'll proceed with your treatment. Our expert team will guide you.",
   },
   {
-    icon: <FaHandsHelping className="text-[#1e84b5] w-7 h-7" />,
+    icon: <FaHandsHelping className="text-[#1e84b5]" size={48} />,
     title: "Follow-Up Care",
     description:
-      "After your treatment, we'll schedule any necessary follow-up\nappointments to monitor your progress.",
+      "After your treatment, we'll schedule any necessary follow-up appointments to monitor your progress.",
   },
 ];
 
 const ProcessStep = ({ step, index, isLast }) => (
-  <div className="relative flex items-start gap-6 min-h-[120px]">
+  <div className="relative flex items-start gap-14 min-h-[120px]">
     {/* Vertical line */}
     {!isLast && (
-      <div className="absolute left-6 top-12 h-[80px] w-px bg-[#0e384c]/5 z-0" />
+      <div className="absolute left-9 top-20 h-[80px] w-px bg-[#0e384c]/5 z-0" />
     )}
-    {/* Step Number */}
+    {/* Icon + Number */}
     <div className="relative z-10">
-      <div className="w-10 h-10 bg-[#1e84b5] rounded-2xl flex items-center justify-center mb-2">
-        <span className="text-white text-base font-bold font-onest leading-loose">{index + 1}</span>
-      </div>
-      <div className="w-16 h-16 bg-white rounded-[30px] outline outline-1 outline-[#0e384c]/5 flex items-center justify-center absolute left-[-12px] top-[-12px] z-[-1]">
-        {step.icon}
+      <div className="w-20 h-20 flex items-center justify-center">
+        <div className="w-20 h-20 bg-white rounded-[20px] outline outline-[#0e384c]/10 flex items-center justify-center relative">
+          {step.icon}
+          {/* Number badge */}
+          <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#1e84b5] rounded-full flex items-center justify-center shadow-md">
+            <span className="text-white text-base font-bold font-onest leading-loose">{index + 1}</span>
+          </div>
+        </div>
       </div>
     </div>
     {/* Step Content */}
     <div className="flex flex-col gap-2 pt-1">
       <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">{step.title}</div>
-      <div className="text-[#527282] text-base font-normal font-onest leading-7 whitespace-pre-line">{step.description}</div>
+      <div className="text-[#527282] text-base font-normal font-onest leading-7">{step.description}</div>
     </div>
   </div>
 );
@@ -60,7 +63,7 @@ const ProcessSection = () => (
           className="relative flex flex-col gap-8"
         >
           {/* Our Process Label */}
-          <div className="flex items-center gap-2  mb-2">
+          <div className="flex items-center gap-2 mb-2">
             <TbDental className="text-[#1e84b5]" size={20} />
             <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Process</span>
           </div>

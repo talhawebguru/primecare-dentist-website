@@ -46,8 +46,8 @@ const AboutSection = () => (
           />
           {/* Happy Patients Badge */}
           <div className="absolute left-12 bottom-16 w-[175px]">
-            <div className="p-6 bg-white/10 rounded-[40px] outline outline-1 outline-white/10 backdrop-blur-[5px] flex flex-col items-start">
-              <div className="mb-4 rounded-[14px] outline outline-1 outline-white/10 p-2 flex items-center justify-center bg-white/10">
+            <div className="p-6 bg-white/10 rounded-[40px] outline  outline-white/10 backdrop-blur-[5px] flex flex-col items-start">
+              <div className="mb-4 rounded-[14px] outline outline-white/10 p-2 flex items-center justify-center bg-white/10">
                 <FaRegSmile className="text-white w-7 h-7" />
               </div>
               <div>
