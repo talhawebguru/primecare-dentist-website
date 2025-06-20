@@ -8,6 +8,7 @@ import TeamSection from './components/home/TeamSection';
 import BlogSection from './components/home/BlogSection';
 import ContactSection from './components/home/ContactSection';
 import ContactInfoBar from "./components/home/ContactInfoBar";
+import WhyChooseUs from "./components/home/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ProcessSection />
+      <WhyChooseUs />
       <TestimonialsSection />
       <TeamSection />
       <BlogSection />

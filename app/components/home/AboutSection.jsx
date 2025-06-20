@@ -1,9 +1,15 @@
-'use client';
+"use client";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { FaRegSmile, FaUserMd, FaAmbulance, FaMicroscope, FaCheckCircle } from 'react-icons/fa';
+import {
+  FaRegSmile,
+  FaUserMd,
+  FaAmbulance,
+  FaMicroscope,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { TbDental } from "react-icons/tb";
-import { MdGroups } from 'react-icons/md';
+import { MdGroups } from "react-icons/md";
 import Container from "../common/Container";
 
 const aboutFeatures = [
@@ -51,8 +57,12 @@ const AboutSection = () => (
                 <FaRegSmile className="text-white w-7 h-7" />
               </div>
               <div>
-                <div className="text-white text-xl font-semibold font-onest leading-normal">875 +</div>
-                <div className="text-white text-base font-normal font-onest leading-7">Happy Patients</div>
+                <div className="text-white text-xl font-semibold font-onest leading-normal">
+                  875 +
+                </div>
+                <div className="text-white text-base font-normal font-onest leading-7">
+                  Happy Patients
+                </div>
               </div>
             </div>
           </div>
@@ -67,18 +77,26 @@ const AboutSection = () => (
           {/* About Us Label */}
           <div className="flex items-center gap-2 relative">
             <TbDental className="text-[#1e84b5]" size={20} />
-            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">About Us</span>
+            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
+              About Us
+            </span>
           </div>
           {/* Heading */}
           <h2 className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">
-            The evolution of our company<br />
-            and the people who made It<br />
+            The evolution of our company
+            <br />
+            and the people who made It
+            <br />
             possible
           </h2>
           {/* Paragraph */}
           <p className="text-[#527282] text-base font-normal font-onest leading-7">
-            The goal of our clinic is to provide friendly, caring dentistry and the highest level of<br />
-            general, cosmetic and specialist dental treatments With dental practice throughout<br />
+            The goal of our clinic is to provide friendly, caring dentistry and
+            the highest level of
+            <br />
+            general, cosmetic and specialist dental treatments With dental
+            practice throughout
+            <br />
             the world.
           </p>
           {/* Features & Years of Experience */}
@@ -90,7 +108,9 @@ const AboutSection = () => (
                   <span className="w-[38px] h-[38px] flex items-center justify-center bg-[#1e84b5]/10 rounded-[12px]">
                     {feature.icon}
                   </span>
-                  <span className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">{feature.label}</span>
+                  <span className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">
+                    {feature.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -99,8 +119,12 @@ const AboutSection = () => (
               <div className="mb-4 bg-white rounded-xl flex items-center justify-center w-14 h-14">
                 <FaUserMd className="text-[#1e84b5]" size={48} />
               </div>
-              <div className="text-white text-[40px] font-bold font-onest leading-[48px]">25 +</div>
-              <div className="text-white text-base font-normal font-onest leading-7">Years Of Experience</div>
+              <div className="text-white text-[40px] font-bold font-onest leading-[48px]">
+                25 +
+              </div>
+              <div className="text-white text-base font-normal font-onest leading-7">
+                Years Of Experience
+              </div>
             </div>
           </div>
           {/* Read More Button */}
@@ -110,7 +134,13 @@ const AboutSection = () => (
           >
             Read More
             <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">
-              <path d="M1 7H15M15 7L9 1M15 7L9 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path
+                d="M1 7H15M15 7L9 1M15 7L9 13"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </motion.button>
         </motion.div>
