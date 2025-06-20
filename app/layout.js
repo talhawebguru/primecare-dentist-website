@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Onest } from "next/font/google";
 import "./globals.css";
+import MouseTrail from "./components/common/MouseTrail";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${onest.variable} antialiased`}
       >
+        <MouseTrail />
         {children}
       </body>
     </html>
