@@ -75,7 +75,7 @@ const AboutSection = () => (
           className="flex-1 min-w-[320px] max-w-[650px] flex flex-col gap-6"
         >
           {/* About Us Label */}
-          <div className="flex items-center gap-2 relative">
+          <div className="flex items-center gap-2">
             <TbDental className="text-[#1e84b5]" size={20} />
             <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
               About Us
