@@ -33,7 +33,7 @@ const contactInfo = [
 ];
 
 const Footer = () => (
-  <footer className="bg-[#0e384c] w-full">
+  <footer className="bg-[#0e384c] w-full overflow-x-hidden">
     <Container>
       {/* Top CTA */}
       <div className="flex flex-col md:flex-row justify-between items-center border-b border-white/10 pt-[50px] pb-10 gap-6">

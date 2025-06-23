@@ -58,7 +58,7 @@ const TestimonialCard = ({ testimonial, index }) => (
 );
 
 const TestimonialsSection = () => (
-  <section className="py-[100px] bg-white">
+  <section className="py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="text-center mb-16">
         <div className="flex justify-center gap-2 items-center mb-2">

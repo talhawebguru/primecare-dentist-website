@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header className="bg-[rgba(14,56,76,1)] py-3 border-b border-white/10">
       <Container>
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between gap-5 h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -34,7 +34,7 @@ const Header = () => {
             />
           </Link>
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
             {navLinks.map(({ label, hasDropdown, href }) => (
               <li key={label}>
                 <Link
@@ -95,7 +95,7 @@ const Header = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-6 pr-20 lg:hidden"
+            className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 p-6 lg:hidden"
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}

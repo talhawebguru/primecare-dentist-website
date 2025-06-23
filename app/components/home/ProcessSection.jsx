@@ -52,7 +52,7 @@ const ProcessStep = ({ step, index, isLast }) => (
 );
 
 const ProcessSection = () => (
-  <section className="py-[100px] bg-white">
+  <section className="py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Left: Title, Heading, Paragraph, Button */}

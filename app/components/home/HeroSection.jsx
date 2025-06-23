@@ -7,7 +7,7 @@ import Container from "../common/Container";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[rgba(14,56,76,1)] relative pt-20 pb-32 overflow-hidden h-[calc(100vh-104px)] max-h-[900px]">
+    <section className="bg-[rgba(14,56,76,1)] relative pt-20 pb-32 overflow-hidden h-[calc(100vh-104px)] max-h-[900px] overflow-x-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center z-10">
           {/* Left: Content */}

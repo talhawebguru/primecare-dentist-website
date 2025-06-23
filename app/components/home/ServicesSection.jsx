@@ -59,7 +59,7 @@ const ServiceCard = ({ icon, title, description, index }) => (
 );
 
 const ServicesSection = () => (
-  <section className="py-[100px] bg-[#f9fcff]">
+  <section className="py-[100px] bg-[#f9fcff] overflow-x-hidden">
     <Container>
       {/* Section Header */}
       <div className="flex flex-col items-center mb-12">

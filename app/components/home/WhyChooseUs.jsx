@@ -73,7 +73,7 @@ const WhyChooseFeature = ({ icon, title, description, isLast }) => (
 );
 
 const WhyChooseStat = ({ label, value, index, showDivider }) => (
-  <div className="flex-1 min-w-[180px] max-w-[240px] relative flex flex-col gap-5 pr-0">
+  <div className="flex-1  flex flex-col gap-5 divide-[#0e384c]/10">
     <div className="text-[#0e384c] text-sm font-normal font-onest leading-relaxed mb-2">{index}</div>
     <div className="flex flex-col gap-2.5">
       <div className="flex items-start h-12">
@@ -81,14 +81,11 @@ const WhyChooseStat = ({ label, value, index, showDivider }) => (
       </div>
       <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">{label}</div>
     </div>
-    {showDivider && (
-      <div className="hidden md:block w-px h-[90px] absolute right-0 top-2 bg-[#0e384c]/10" />
-    )}
   </div>
 );
 
 const WhyChooseUs = () => (
-  <section className="relative bg-[#f9fcff] ">
+  <section className="relative bg-[#f9fcff] overflow-x-hidden overflow-x-hidden">
       <div className="flex flex-col lg:flex-row w-full min-h-[700px]">
         {/* Left: Image with overlayed glassmorphism card */}
         <div className="relative flex-1 flex items-center justify-center min-h-[500px]">
@@ -124,7 +121,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-2"
+            className="flex items-center gap-2 mb-2"
           >
             <TbDental className="text-[#1e84b5]" size={20} />
             <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Why Choose Us</span>
@@ -161,7 +158,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="flex flex-row items-stretch justify-between gap-0 divide-x divide-[#0e384c]/10 bg-transparent"
+            className="flex flex-row flex-wrap gap-10  justify-between gap-0 divide-x divide-[#0e384c]/10 bg-transparent"
           >
             {stats.map((stat, idx) => (
               <WhyChooseStat

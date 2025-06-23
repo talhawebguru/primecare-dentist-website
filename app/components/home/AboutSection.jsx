@@ -32,7 +32,7 @@ const aboutFeatures = [
 ];
 
 const AboutSection = () => (
-  <section className="py-[100px] bg-white">
+  <section className="py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="flex flex-wrap items-center gap-10">
         {/* Left: Image with Happy Patients */}

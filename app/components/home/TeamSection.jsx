@@ -60,7 +60,7 @@ const TeamCard = ({ member, index }) => (
 );
 
 const TeamSection = () => (
-  <section className="py-[100px] bg-white">
+  <section className="py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="flex flex-col items-center gap-5">
         {/* Section Header */}

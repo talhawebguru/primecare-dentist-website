@@ -43,7 +43,7 @@ const ContactInfoItem = ({ icon, title, subtitle, showDivider }) => (
 );
 
 const ContactInfoBar = () => (
-  <section className="bg-white border-b border-[#0e384c]/5">
+  <section className="bg-white border-b border-[#0e384c]/5 overflow-x-hidden">
     <Container>
       <motion.div
         initial={{ opacity: 0, y: 30 }}

@@ -73,7 +73,7 @@ const BlogCard = ({ post, index }) => (
 );
 
 const BlogSection = () => (
-  <section className="py-[100px] bg-[#f8fbff]">
+  <section className="py-[100px] bg-[#f8fbff] overflow-x-hidden">
     <Container>
       <div className="flex flex-col items-center mb-12">
         <div className="flex items-center ga-2 mb-2">

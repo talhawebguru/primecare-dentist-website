@@ -50,7 +50,7 @@ const ContactCard = ({ icon, label, value, delay }) => (
 );
 
 const ContactSection = () => (
-  <section className="pt-[50px] pb-[100px] bg-[#f8fbff]">
+  <section className="pt-[50px] pb-[100px] bg-[#f8fbff] overflow-x-hidden">
     <Container>
       {/* Section Header */}
       <div className="flex flex-col items-center max-w-[820px] mx-auto pb-5">
