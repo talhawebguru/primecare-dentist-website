@@ -32,15 +32,15 @@ const aboutFeatures = [
 ];
 
 const AboutSection = () => (
-  <section className="py-[100px] bg-white overflow-x-hidden">
+  <section className="py-12 lg:py-18 md:py-[100px] bg-white overflow-x-hidden">
     <Container>
-      <div className="flex flex-wrap items-center gap-10">
+      <div className="flex flex-col lg:flex-row flex-wrap items-center gap-10">
         {/* Left: Image with Happy Patients */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="relative flex-1 min-w-[320px] max-w-[590px] flex justify-center"
+          className="relative lg:flex-1 w-full h-[520px] lg:h-auto lg:min-w-[320px] lg:max-w-[590px] flex justify-center"
         >
           <Image
             src="/images/dental-chair.png"
@@ -82,7 +82,7 @@ const AboutSection = () => (
             </span>
           </div>
           {/* Heading */}
-          <h2 className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">
+          <h2 className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px]">
             The evolution of our company
             <br />
             and the people who made It

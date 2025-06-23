@@ -33,7 +33,7 @@ const ServiceCard = ({ icon, title, description, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     viewport={{ once: true }}
-    className="relative bg-white rounded-[30px] outline  outline-[#0e384c]/5 px-7 py-8 flex flex-col gap-8 w-full max-w-[297.5px]  overflow-hidden"
+    className="grow relative bg-white rounded-[30px] outline  outline-[#0e384c]/5 px-7 py-8 flex flex-col gap-8 w-full sm:max-w-[297.5px]  overflow-hidden"
   >
    {/* Icon */}
     <div className="z-10 w-12 h-12 p-3 bg-[#1e84b5] rounded-[14px] flex items-center justify-center">
@@ -59,15 +59,15 @@ const ServiceCard = ({ icon, title, description, index }) => (
 );
 
 const ServicesSection = () => (
-  <section className="py-[100px] bg-[#f9fcff] overflow-x-hidden">
+  <section className="py-12 sm:py-[100px] bg-[#f9fcff] overflow-x-hidden">
     <Container>
       {/* Section Header */}
       <div className="flex flex-col items-center mb-12">
-        <div className="relative flex items-center gap-3 mb-2">
+        <div className="flex items-center gap-3 mb-2">
           <TbDental className="text-[#1e84b5]" size={20} />
           <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Services</span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-4">
+        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest leading-[48px] mb-4">
           Explore the solutions we provide
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl">
