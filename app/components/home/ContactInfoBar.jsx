@@ -22,7 +22,7 @@ const infoItems = [
 ];
 
 const ContactInfoItem = ({ icon, title, subtitle, showDivider }) => (
-  <div className="flex flex-1 min-w-[260px] items-center py-2 mx-6 relative">
+  <div className="grow flex items-center py-2 mx-6 relative">
     <div className="pr-4">
       <div className="p-3 bg-[#1e84b5] rounded-xl flex items-center justify-center">
         {icon}
@@ -49,7 +49,7 @@ const ContactInfoBar = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="flex flex-wrap justify-between items-center py-8"
+        className="flex flex-wrap xl:flex-nowrap justify-between items-center py-8"
       >
         {infoItems.map((item, idx) => (
           <ContactInfoItem
