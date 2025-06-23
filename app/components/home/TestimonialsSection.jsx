@@ -1,9 +1,14 @@
 'use client';
+import { useRef } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import Container from "../common/Container";
 import { TbDental } from "react-icons/tb";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const testimonials = [
   {
@@ -26,11 +31,11 @@ const testimonials = [
   },
 ];
 
-const TestimonialCard = ({ testimonial, index }) => (
+const TestimonialCard = ({ testimonial }) => (
   <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }}
     className="bg-[#f9fcff] rounded-[30px] p-8 flex flex-col h-full shadow-none outline outline-[#0e384c]/5"
   >
     <FaQuoteLeft className="text-[#1e84b5] w-8 h-8 mb-6" />
@@ -57,29 +62,74 @@ const TestimonialCard = ({ testimonial, index }) => (
   </motion.div>
 );
 
-const TestimonialsSection = () => (
-  <section className="py-[100px] bg-white overflow-x-hidden">
-    <Container>
-      <div className="text-center mb-16">
-        <div className="flex justify-center gap-2 items-center mb-2">
-          <TbDental className="text-[#1e84b5]" size={20} />
-          <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Testimonials</span>
+const TestimonialsSection = () => {
+  const swiperRef = useRef(null);
+
+  return (
+    <section className="py-12 sm:py-[100px] bg-white overflow-x-hidden">
+      <Container>
+        <div className="text-center mb-16">
+          <div className="flex justify-center gap-2 items-center mb-2">
+            <TbDental className="text-[#1e84b5]" size={20} />
+            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Testimonials</span>
+          </div>
+          <h2 className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
+            Listen from our happy patients
+          </h2>
+          <p className="text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl mx-auto">
+            The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and
+            <br className="hidden md:block" />
+            specialist dental treatments. With dental practices throughout the world.
+          </p>
         </div>
-        <h2 className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-4">
-          Listen from our happy patients
-        </h2>
-        <p className="text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl mx-auto">
-          The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and<br className="hidden md:block" />
-          specialist dental treatments. With dental practices throughout the world.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, idx) => (
-          <TestimonialCard key={testimonial.name} testimonial={testimonial} index={idx} />
-        ))}
-      </div>
-    </Container>
-  </section>
-);
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            slidesPerView={1}
+            spaceBetween={32}
+            loop
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            navigation={{
+              nextEl: ".testimonial-next",
+              prevEl: ".testimonial-prev",
+            }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="!overflow-visible"
+            onSwiper={swiper => (swiperRef.current = swiper)}
+          >
+            {testimonials.map((testimonial, idx) => (
+              <SwiperSlide key={testimonial.name}>
+                <TestimonialCard testimonial={testimonial} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          {/* Custom Pagination Arrows */}
+          <div className="flex justify-center items-center gap-4 mt-10">
+            <button
+              className="testimonial-prev w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-[#1e84b5] hover:bg-[#1e84b5] hover:text-white transition"
+              aria-label="Previous testimonial"
+            >
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <button
+              className="testimonial-next w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-[#1e84b5] hover:bg-[#1e84b5] hover:text-white transition"
+              aria-label="Next testimonial"
+            >
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 export default TestimonialsSection;
