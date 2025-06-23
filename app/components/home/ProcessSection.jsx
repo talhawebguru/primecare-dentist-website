@@ -52,7 +52,7 @@ const ProcessStep = ({ step, index, isLast }) => (
 );
 
 const ProcessSection = () => (
-  <section className="py-[100px] bg-white overflow-x-hidden">
+  <section className="py-12 sm:py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Left: Title, Heading, Paragraph, Button */}
@@ -68,8 +68,8 @@ const ProcessSection = () => (
             <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Process</span>
           </div>
           {/* Heading */}
-          <h2 className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">
-            A Step by Step Guide to Our<br />
+          <h2 className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px]">
+            A Step by Step Guide to Our <br className="hidden sm:block" />
             Dental Care Process
           </h2>
           {/* Paragraph */}
@@ -90,7 +90,7 @@ const ProcessSection = () => (
           </motion.button>
         </motion.div>
         {/* Right: Steps */}
-        <div className="flex flex-col gap-[60px] pt-3">
+        <div className="flex flex-col gap-10 sm:gap-[60px] pt-3">
           {processSteps.map((step, idx) => (
             <motion.div
               key={step.title}

@@ -67,7 +67,7 @@ const ServicesSection = () => (
           <TbDental className="text-[#1e84b5]" size={20} />
           <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Services</span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest leading-[48px] mb-4">
+        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
           Explore the solutions we provide
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl">
