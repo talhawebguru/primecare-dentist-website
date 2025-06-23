@@ -7,7 +7,7 @@ import Container from "../common/Container";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[rgba(14,56,76,1)] relative pt-20 pb-32 overflow-hidden h-[calc(100vh-104px)] max-h-[900px] overflow-x-hidden">
+    <section className="bg-[rgba(14,56,76,1)] relative pt-12 sm:pt-20 pb-20 sm:pb-32  lg:h-[calc(100vh-104px)] lg:max-h-[900px] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center z-10">
           {/* Left: Content */}
@@ -17,7 +17,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold text-white font-onest leading-[67.2px]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-onest md:leading-[67.2px]">
               Exceptional dental<br />
               care for every stage<br />
               of your journey
@@ -41,9 +41,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex justify-between gap-4"
+              className="flex items-stretch flex-wrap sm:flex-nowrap justify-between gap-4"
             >
-              <div className="flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="grow flex items-center  gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <FaUserMd className="w-6 h-6 text-white" />
                 </div>
@@ -53,7 +53,7 @@ const HeroSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="grow flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <FaHandHoldingMedical className="w-6 h-6 text-white" />
                 </div>
@@ -63,7 +63,7 @@ const HeroSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
+              <div className="grow flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <FaWallet className="w-6 h-6 text-white" />
                 </div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
                 alt="Dental Care"
                 width={178}
                 height={389}
-                className="rounded-[40px] object-cover"
+                className="sm:rounded-[40px] object-cover"
                 priority
               />
               <Image
@@ -97,7 +97,7 @@ const HeroSection = () => {
                 alt="Dental Treatment"
                 width={178}
                 height={180}
-                className="rounded-[40px] object-cover"
+                className="sm:rounded-[40px] object-cover"
               />
             </div>
             <div className="space-y-6">
@@ -106,14 +106,14 @@ const HeroSection = () => {
                 alt="Dental Procedure"
                 width={178}
                 height={180}
-                className="rounded-[40px] object-cover"
+                className="sm:rounded-[40px] object-cover"
               />
               <Image
                 src="/images/hero/dental2.png"
                 alt="Dental Office"
                 width={178}
                 height={389}
-                className="rounded-[40px] object-cover"
+                className="sm:rounded-[40px] object-cover"
               />
             </div>
             <div className="flex items-center">
@@ -122,7 +122,7 @@ const HeroSection = () => {
                 alt="Dental Team"
                 width={178}
                 height={389}
-                className="rounded-[40px] object-cover"
+                className="sm:rounded-[40px] object-cover"
               />
             </div>
           </motion.div>
@@ -132,7 +132,7 @@ const HeroSection = () => {
         <Image
           src={VectorImg}
           alt="Decorative Vector"
-          className="absolute bottom-0 left-0 w-full h-auto object-cover  pointer-events-none select-none z-20"
+          className="absolute bottom-0 left-0 w-full h-48 lg:h-auto object-cover  pointer-events-none select-none z-20"
         />
     </section>
   );
