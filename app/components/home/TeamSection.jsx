@@ -60,7 +60,7 @@ const TeamCard = ({ member, index }) => (
 );
 
 const TeamSection = () => (
-  <section className="py-[100px] bg-white overflow-x-hidden">
+  <section className="py-12 sm:py-[100px] bg-white overflow-x-hidden">
     <Container>
       <div className="flex flex-col items-center gap-5">
         {/* Section Header */}
@@ -71,7 +71,7 @@ const TeamSection = () => (
             <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Team</span>
           </div>
           {/* Heading */}
-          <h2 className="text-center text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-2">
+          <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
             Experienced and caring dental team
           </h2>
           {/* Description */}
@@ -81,7 +81,7 @@ const TeamSection = () => (
           </p>
         </div>
         {/* Team Grid */}
-        <div className="w-full flex flex-wrap justify-center items-center gap-[30px]">
+        <div className="w-full flex flex-wrap justify-center items-center gap-5 sm:gap-[30px]">
           {team.map((member, idx) => (
             <TeamCard key={member.name} member={member} index={idx} />
           ))}
