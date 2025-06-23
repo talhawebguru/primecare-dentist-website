@@ -6,3 +6,7 @@
     --text-primary: rgba(14,56,76,1);
     --font-onest: onesta, sans-serif;
 }
+
+body{
+    scroll-behavior: smooth;
+}
