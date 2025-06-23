@@ -29,7 +29,7 @@ const ContactCard = ({ icon, label, value, delay }) => (
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay }}
-    className="flex-1 min-w-[300px] max-w-[420px] bg-white rounded-[30px] outline outline-1 outline-[#0e384c]/5 p-[21px] flex flex-col justify-center"
+    className="flex-1 min-w-[300px] max-w-[420px] bg-white rounded-[30px] outline outline-[#0e384c]/5 p-[21px] flex flex-col justify-center"
   >
     <div className="flex items-center">
       <div className="pr-[15px]">
@@ -60,7 +60,7 @@ const ContactSection = () => (
             Contact Us
           </span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-2">
+        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
           Get in touch with us
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7">
@@ -70,14 +70,14 @@ const ContactSection = () => (
         </p>
       </div>
       {/* Contact Cards */}
-      <div className="w-full flex flex-col md:flex-row gap-[30px] justify-center items-stretch mb-10">
+      <div className="w-full flex flex-wrap flex-row gap-[30px] justify-center items-stretch mb-10">
         {contactInfo.map((info, idx) => (
           <ContactCard key={info.label} {...info} delay={idx * 0.1} />
         ))}
       </div>
       {/* Map */}
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden">
+        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden grayscale-100 hover:grayscale-0 transition-all duration-300">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645645201013!5m2!1sen!2s"
             width="100%"
