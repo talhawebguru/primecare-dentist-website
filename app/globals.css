@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #1E84B5;
-    --color-secondary: #1E84B5;
-    /* --color-offwhite */
+    --color-primary: rgba(14,56,76,1);
+    --color-secondary: rgba(4, 109, 221, 1);
+    --text-primary: rgba(14,56,76,1);
     --font-onest: onesta, sans-serif;
 }

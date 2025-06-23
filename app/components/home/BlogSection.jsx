@@ -54,17 +54,17 @@ const BlogCard = ({ post, index }) => (
       />
     </div>
     <div className="flex-1 flex flex-col justify-center items-start pl-0 lg:pl-5 w-full">
-      <h3 className="text-[#0e384c] text-xl font-semibold font-onest leading-normal mb-2 whitespace-pre-line">
+      <h3 className="text-primary text-xl font-semibold font-onest leading-normal mb-2 whitespace-pre-line">
         {post.title}
       </h3>
       <div className="border-b border-[#0e384c]/5 pb-4 mb-4 w-full">
-        <p className="text-[#0e384c] text-base font-normal font-onest leading-7 whitespace-pre-line">
+        <p className="text-primary text-base font-normal font-onest leading-7 whitespace-pre-line">
           {post.excerpt}
         </p>
       </div>
       <a
         href={post.link}
-        className="flex items-center gap-2 text-[#1e84b5] text-base font-semibold font-onest leading-relaxed hover:underline"
+        className="flex items-center gap-2 text-secondary text-base font-semibold font-onest leading-relaxed hover:underline"
       >
         Read More <FaArrowRight className="w-4 h-4" />
       </a>
@@ -77,12 +77,12 @@ const BlogSection = () => (
     <Container>
       <div className="flex flex-col items-center mb-12">
         <div className="flex items-center gap-2 mb-2">
-          <TbDental className="text-[#1e84b5]" size={20} />
-          <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
+          <TbDental className="text-secondary" size={20} />
+          <span className="text-secondary text-sm font-semibold font-onest leading-none">
             Blog & Articles
           </span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
+        <h2 className="text-center text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
           Our latest dental tips and news
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl">

@@ -24,12 +24,12 @@ const infoItems = [
 const ContactInfoItem = ({ icon, title, subtitle, showDivider }) => (
   <div className="grow flex items-center py-2 mx-6 relative">
     <div className="pr-4">
-      <div className="p-3 bg-[#1e84b5] rounded-xl flex items-center justify-center">
+      <div className="p-3 bg-secondary rounded-xl flex items-center justify-center">
         {icon}
       </div>
     </div>
     <div>
-      <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">
+      <div className="text-primary text-xl font-semibold font-onest leading-normal">
         {title}
       </div>
       <div className="text-[#527282] text-base font-normal font-onest leading-7">

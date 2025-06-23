@@ -38,7 +38,7 @@ const TestimonialCard = ({ testimonial }) => (
     transition={{ duration: 0.5 }}
     className="bg-[#f9fcff] rounded-[30px] p-8 flex flex-col h-full shadow-none outline outline-[#0e384c]/5"
   >
-    <FaQuoteLeft className="text-[#1e84b5] w-8 h-8 mb-6" />
+    <FaQuoteLeft className="text-secondary w-8 h-8 mb-6" />
     <p className="text-[#527282] text-base font-normal font-onest leading-7 mb-8 whitespace-pre-line">
       {testimonial.text}
     </p>
@@ -53,7 +53,7 @@ const TestimonialCard = ({ testimonial }) => (
         />
       </div>
       <div>
-        <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal capitalize">
+        <div className="text-primary text-xl font-semibold font-onest leading-normal capitalize">
           {testimonial.name}
         </div>
         <div className="text-[#527282] text-base font-normal font-onest leading-7">{testimonial.role}</div>
@@ -70,10 +70,10 @@ const TestimonialsSection = () => {
       <Container>
         <div className="text-center mb-16">
           <div className="flex justify-center gap-2 items-center mb-2">
-            <TbDental className="text-[#1e84b5]" size={20} />
-            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Testimonials</span>
+            <TbDental className="text-secondary" size={20} />
+            <span className="text-secondary text-sm font-semibold font-onest leading-none">Testimonials</span>
           </div>
-          <h2 className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
+          <h2 className="text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
             Listen from our happy patients
           </h2>
           <p className="text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl mx-auto">
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
           {/* Custom Pagination Arrows */}
           <div className="flex justify-center items-center gap-4 mt-10">
             <button
-              className="testimonial-prev w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-[#1e84b5] hover:bg-[#1e84b5] hover:text-white transition"
+              className="testimonial-prev w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-secondary hover:bg-secondary hover:text-white transition"
               aria-label="Previous testimonial"
             >
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -118,7 +118,7 @@ const TestimonialsSection = () => {
               </svg>
             </button>
             <button
-              className="testimonial-next w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-[#1e84b5] hover:bg-[#1e84b5] hover:text-white transition"
+              className="testimonial-next w-10 h-10 flex items-center justify-center rounded-full border border-[#1e84b5] text-secondary hover:bg-secondary hover:text-white transition"
               aria-label="Next testimonial"
             >
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">

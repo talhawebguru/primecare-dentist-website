@@ -22,7 +22,7 @@ const MouseTrail = () => {
 
   return (
     <motion.div
-      className="pointer-events-none fixed z-[9999] left-0 top-0 w-3 h-3 rounded-full bg-[#1e84b5]/60 backdrop-blur-[2px]"
+      className="pointer-events-none fixed z-[9999] left-0 top-0 w-3 h-3 rounded-full bg-secondary/60 backdrop-blur-[2px]"
       style={{
         x: trailX,
         y: trailY,

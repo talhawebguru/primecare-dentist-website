@@ -6,6 +6,7 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
 import Container from "./Container";
+import { FaArrowRight } from "react-icons/fa";
 
 const navLinks = [
   { label: "Home", hasDropdown: true, href: "/" },
@@ -19,7 +20,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="bg-[rgba(14,56,76,1)] py-3 border-b border-white/10">
+    <header className="bg-white py-3 border-b border-white/10">
       <Container>
         <nav className="flex items-center justify-between gap-5 h-20">
           {/* Logo */}
@@ -29,7 +30,7 @@ const Header = () => {
               alt="Logo"
               width={240}
               height={50}
-              className="w-[160px] md:w-[240px] h-auto"
+              className="w-[75px] h-auto"
               priority
             />
           </Link>
@@ -39,7 +40,7 @@ const Header = () => {
               <li key={label}>
                 <Link
                   href={href}
-                  className="flex items-center gap-1 text-white text-base font-semibold font-onest leading-relaxed hover:text-[#2196C9] transition-colors"
+                  className="flex items-center gap-1 text-black text-base font-semibold font-onest leading-relaxed hover:text-secondary transition-colors"
                 >
                   {label}
                   {hasDropdown && <IoIosArrowDown className="ml-1 text-lg" />}
@@ -55,18 +56,10 @@ const Header = () => {
           >
             <Link
               href="/book-appointment"
-              className="flex items-center gap-4 bg-[#1e84b5] text-white px-5 py-4 rounded-2xl text-base font-semibold font-onest leading-none"
+              className="flex items-center gap-4 bg-secondary text-white px-5 py-4 rounded-2xl text-base font-semibold font-onest leading-none hover:scale-105 hover:bg-secondary/90 transition-colors group  hover:shadow-lg                   "
             >
               Book Appointment
-              <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">
-                <path
-                  d="M1 7H15M15 7L9 1M15 7L9 13"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <FaArrowRight className="text-white group-hover:text-secondary" />
             </Link>
           </motion.div>
           {/* Mobile Hamburger */}
@@ -119,13 +112,13 @@ const Header = () => {
               <button
                 onClick={() => setMobileOpen(false)}
                 aria-label="Close mobile menu"
-                className="text-[#0e384c] p-2"
+                className="text-primary p-2"
               >
                 <HiX className="w-8 h-8" />
               </button>
             </div>
             <nav>
-              <ul className="flex flex-col gap-4 text-lg font-semibold text-[#0e384c]">
+              <ul className="flex flex-col gap-4 text-lg font-semibold text-primary">
                 {navLinks.map(({ label, hasDropdown, href }) => (
                   <li key={label} className="py-2 border-b border-gray-200">
                     <Link
@@ -134,7 +127,9 @@ const Header = () => {
                       onClick={() => setMobileOpen(false)}
                     >
                       {label}
-                      {hasDropdown && <IoIosArrowDown className="ml-1 text-lg" />}
+                      {hasDropdown && (
+                        <IoIosArrowDown className="ml-1 text-lg" />
+                      )}
                     </Link>
                   </li>
                 ))}
@@ -142,7 +137,7 @@ const Header = () => {
               <div className="mt-8">
                 <Link
                   href="/book-appointment"
-                  className="w-full flex items-center justify-center gap-3 bg-[#1e84b5] text-white px-5 py-3 rounded-xl text-base font-semibold font-onest leading-none"
+                  className="w-full flex items-center justify-center gap-3 bg-secondary text-white px-5 py-3 rounded-xl text-base font-semibold font-onest leading-none"
                   onClick={() => setMobileOpen(false)}
                 >
                   Book Appointment

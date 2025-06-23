@@ -36,19 +36,19 @@ const ServiceCard = ({ icon, title, description, index }) => (
     className="grow relative bg-white rounded-[30px] outline  outline-[#0e384c]/5 px-7 py-8 flex flex-col gap-8 w-full sm:max-w-[297.5px]  overflow-hidden"
   >
    {/* Icon */}
-    <div className="z-10 w-12 h-12 p-3 bg-[#1e84b5] rounded-[14px] flex items-center justify-center">
+    <div className="z-10 w-12 h-12 p-3 bg-secondary rounded-[14px] flex items-center justify-center">
       {icon}
     </div>
     {/* Title & Description */}
     <div className="z-10 flex flex-col gap-2.5 w-full">
-      <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">{title}</div>
+      <div className="text-primary text-xl font-semibold font-onest leading-normal">{title}</div>
       <div className="border-b border-[#0e384c]/5 pb-5">
         <div className="text-[#527282] text-base font-normal font-onest leading-7 whitespace-pre-line">
           {description}
         </div>
       </div>
       {/* Learn More */}
-      <button className="mt-5 flex items-center gap-2 text-[#1e84b5] text-base font-semibold font-onest leading-relaxed rounded-[5px] hover:underline transition-all">
+      <button className="mt-5 flex items-center gap-2 text-secondary text-base font-semibold font-onest leading-relaxed rounded-[5px] hover:underline transition-all">
         Learn More
         <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">
           <path d="M1 7H15M15 7L9 1M15 7L9 13" stroke="#1e84b5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -64,10 +64,10 @@ const ServicesSection = () => (
       {/* Section Header */}
       <div className="flex flex-col items-center mb-12">
         <div className="flex items-center gap-3 mb-2">
-          <TbDental className="text-[#1e84b5]" size={20} />
-          <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Services</span>
+          <TbDental className="text-secondary" size={20} />
+          <span className="text-secondary text-sm font-semibold font-onest leading-none">Our Services</span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
+        <h2 className="text-center text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-4">
           Explore the solutions we provide
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl">

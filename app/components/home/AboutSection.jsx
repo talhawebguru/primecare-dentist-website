@@ -14,19 +14,19 @@ import Container from "../common/Container";
 
 const aboutFeatures = [
   {
-    icon: <FaUserMd className="text-[#1e84b5] w-5 h-5" />,
+    icon: <FaUserMd className="text-secondary w-5 h-5" />,
     label: "Experienced Team",
   },
   {
-    icon: <FaAmbulance className="text-[#1e84b5] w-5 h-5" />,
+    icon: <FaAmbulance className="text-secondary w-5 h-5" />,
     label: "Emergency Dental Services",
   },
   {
-    icon: <FaMicroscope className="text-[#1e84b5] w-5 h-5" />,
+    icon: <FaMicroscope className="text-secondary w-5 h-5" />,
     label: "State-of-the-Art Technology",
   },
   {
-    icon: <FaCheckCircle className="text-[#1e84b5] w-5 h-5" />,
+    icon: <FaCheckCircle className="text-secondary w-5 h-5" />,
     label: "Comprehensive Services",
   },
 ];
@@ -76,13 +76,13 @@ const AboutSection = () => (
         >
           {/* About Us Label */}
           <div className="flex items-center gap-2">
-            <TbDental className="text-[#1e84b5]" size={20} />
-            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
+            <TbDental className="text-secondary" size={20} />
+            <span className="text-secondary text-sm font-semibold font-onest leading-none">
               About Us
             </span>
           </div>
           {/* Heading */}
-          <h2 className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px]">
+          <h2 className="text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px]">
             The evolution of our company
             <br />
             and the people who made It
@@ -105,19 +105,19 @@ const AboutSection = () => (
             <div className="flex flex-col gap-5 flex-1 min-w-[220px]">
               {aboutFeatures.map((feature) => (
                 <div key={feature.label} className="flex items-center gap-3">
-                  <span className="w-[38px] h-[38px] flex items-center justify-center bg-[#1e84b5]/10 rounded-[12px]">
+                  <span className="w-[38px] h-[38px] flex items-center justify-center bg-secondary/10 rounded-[12px]">
                     {feature.icon}
                   </span>
-                  <span className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">
+                  <span className="text-primary text-xl font-semibold font-onest leading-normal">
                     {feature.label}
                   </span>
                 </div>
               ))}
             </div>
             {/* Years of Experience */}
-            <div className="flex flex-col items-start bg-[#0e384c] rounded-[30px] p-8 min-w-[180px] max-w-[220px]">
+            <div className="flex flex-col items-start bg-primary rounded-[30px] p-8 min-w-[180px] max-w-[220px]">
               <div className="mb-4 bg-white rounded-xl flex items-center justify-center w-14 h-14">
-                <FaUserMd className="text-[#1e84b5]" size={48} />
+                <FaUserMd className="text-secondary" size={48} />
               </div>
               <div className="text-white text-[40px] font-bold font-onest leading-[48px]">
                 25 +
@@ -130,7 +130,7 @@ const AboutSection = () => (
           {/* Read More Button */}
           <motion.button
             whileHover={{ scale: 1.04 }}
-            className="mt-4 inline-flex items-center w-fit gap-3 bg-[#1e84b5] rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all"
+            className="mt-4 inline-flex items-center w-fit gap-3 bg-secondary rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all"
           >
             Read More
             <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">

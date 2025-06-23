@@ -33,12 +33,12 @@ const ContactCard = ({ icon, label, value, delay }) => (
   >
     <div className="flex items-center">
       <div className="pr-[15px]">
-        <div className="p-2.5 bg-[#1e84b5] rounded-xl flex items-center justify-center">
+        <div className="p-2.5 bg-secondary rounded-xl flex items-center justify-center">
           {icon}
         </div>
       </div>
       <div>
-        <div className="text-[#0e384c] text-xl font-semibold font-onest capitalize leading-normal">
+        <div className="text-primary text-xl font-semibold font-onest capitalize leading-normal">
           {label}
         </div>
         <div className="text-[#527282] text-base font-normal font-onest leading-7 mt-1">
@@ -55,12 +55,12 @@ const ContactSection = () => (
       {/* Section Header */}
       <div className="flex flex-col items-center max-w-[820px] mx-auto pb-5">
         <div className="flex items-center gap-2 mb-2">
-          <TbDental className="text-[#1e84b5]" size={20} />
-          <span className="text-[#1e84b5] text-sm font-semibold font-onest capitalize leading-none">
+          <TbDental className="text-secondary" size={20} />
+          <span className="text-secondary text-sm font-semibold font-onest capitalize leading-none">
             Contact Us
           </span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
+        <h2 className="text-center text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
           Get in touch with us
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7">

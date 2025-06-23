@@ -49,7 +49,7 @@ const TeamCard = ({ member, index }) => (
     <div className="w-full max-w-[297.5px] flex flex-col items-center">
       <div className="flex flex-col items-center gap-1">
         <div className="py-0.5 flex justify-center items-start">
-          <div className="text-center text-[#0e384c] text-xl font-semibold font-onest leading-normal">{member.name}</div>
+          <div className="text-center text-primary text-xl font-semibold font-onest leading-normal">{member.name}</div>
         </div>
         <div className="pb-0.5 flex flex-col items-center">
           <div className="text-center text-[#527282] text-base font-normal font-onest leading-7">{member.role}</div>
@@ -67,11 +67,11 @@ const TeamSection = () => (
         <div className="w-full max-w-[845px] pb-5 flex flex-col items-center mx-auto relative">
           {/* Our Team label */}
           <div className="flex items-center mb-2">
-            <TbDental className="text-[#1e84b5]" size={20} />
-            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Our Team</span>
+            <TbDental className="text-secondary" size={20} />
+            <span className="text-secondary text-sm font-semibold font-onest leading-none">Our Team</span>
           </div>
           {/* Heading */}
-          <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
+          <h2 className="text-center text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
             Experienced and caring dental team
           </h2>
           {/* Description */}

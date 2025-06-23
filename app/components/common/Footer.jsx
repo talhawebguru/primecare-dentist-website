@@ -1,8 +1,9 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { FaArrowRight } from "react-icons/fa";
 import Container from "./Container";
-import Logo from "@/public/images/logo.svg";
+import FooterLogo from "@/public/images/footerLogo.svg";
 import Image from "next/image";
 
 const quickLinks = [
@@ -35,7 +36,7 @@ const contactInfo = [
 ];
 
 const Footer = () => (
-  <footer className="bg-[#0e384c] w-full overflow-x-hidden">
+  <footer className="bg-gradient-to-b from-[#0357b1] to-[#046ddd]  w-full overflow-x-hidden">
     <Container>
       {/* Top CTA */}
       <div className="flex flex-col md:flex-row justify-start md:justify-between md:items-center border-b border-white/10 pt-[50px] pb-10 gap-6">
@@ -44,12 +45,10 @@ const Footer = () => (
         </h2>
         <a
           href="/contact"
-          className="w-fit flex items-center gap-3 px-6 py-4 bg-[#1e84b5] rounded-[14px] outline outline-white/10 text-white text-base font-semibold font-onest leading-[17.6px] transition hover:bg-[#176b91]"
+          className="w-fit flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group"
         >
           Book Appointment
-          <svg width="18" height="18" fill="none" viewBox="0 0 20 20">
-            <path d="M7 15l5-5-5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <FaArrowRight className="text-secondary group-hover:text-white" />
         </a>
       </div>
       {/* Main Footer */}
@@ -57,19 +56,19 @@ const Footer = () => (
         {/* Brand & Description */}
         <div className="flex-1 min-w-[220px] max-w-[400px]">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={Logo} alt="Primecare Logo"  className="" />
+            <Image src={FooterLogo} alt="Primecare Logo"  className="hover:scale-125" />
           </div>
           <p className="text-white text-base font-normal font-onest leading-7 mb-6">
             The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and specialist dental treatments.
           </p>
           <div className="flex gap-4">
-            <a href="#" aria-label="Facebook" className="text-white text-lg hover:text-[#1e84b5] transition">
+            <a href="#" aria-label="Facebook" className="text-white text-lg hover:text-secondary transition">
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="Instagram" className="text-white text-lg hover:text-[#1e84b5] transition">
+            <a href="#" aria-label="Instagram" className="text-white text-lg hover:text-secondary transition">
               <FaInstagram />
             </a>
-            <a href="#" aria-label="LinkedIn" className="text-white text-lg hover:text-[#1e84b5] transition">
+            <a href="#" aria-label="LinkedIn" className="text-white text-lg hover:text-secondary transition">
               <FaLinkedinIn />
             </a>
           </div>
@@ -117,7 +116,7 @@ const Footer = () => (
       {/* Copyright */}
       <div className="border-t border-white/10 py-6 text-center">
         <span className="text-white text-base font-normal font-onest leading-7">
-          © Primecare 2025 All right reserved.
+          © PSDC 2025 All right reserved.
         </span>
       </div>
     </Container>

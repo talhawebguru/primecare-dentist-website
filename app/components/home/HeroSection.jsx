@@ -1,13 +1,79 @@
-'use client';
+"use client";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { FaUserMd, FaHandHoldingMedical, FaWallet } from 'react-icons/fa';
+import { FaUserMd, FaHandHoldingMedical, FaWallet, FaArrowRight } from "react-icons/fa";
 import VectorImg from "@/public/images/hero/Vector.png";
 import Container from "../common/Container";
 
+const features = [
+  {
+    icon: <FaUserMd className="w-6 h-6 text-white" />,
+    label: (
+      <>
+        Experience
+        <br />
+        Doctor
+      </>
+    ),
+  },
+  {
+    icon: <FaHandHoldingMedical className="w-6 h-6 text-white" />,
+    label: (
+      <>
+        Personalized
+        <br />
+        Care
+      </>
+    ),
+  },
+  {
+    icon: <FaWallet className="w-6 h-6 text-white" />,
+    label: (
+      <>
+        Flexible
+        <br />
+        Payment Option
+      </>
+    ),
+  },
+];
+
+const FeatureCard = ({ icon, label }) => (
+  <motion.div
+    className="relative grow flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl cursor-pointer overflow-hidden group"
+    whileHover="hover"
+    initial="rest"
+    animate="rest"
+  >
+    {/* Animated radial background */}
+    <motion.div
+      variants={{
+        rest: { scale: 0, opacity: 0 },
+        hover: {
+          scale: 4,
+          opacity: 1,
+          transition: { duration: 0.4, ease: "easeOut" },
+        },
+      }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        background:
+          "radial-gradient(circle at 50% 50%, #046DDD 0%, #046DDD 100%, transparent 100%)",
+      }}
+    />
+    <div className="relative z-10 w-12 h-12 flex items-center justify-center">
+      {icon}
+    </div>
+    <div className="relative z-10">
+      <p className="text-white font-onest leading-snug">{label}</p>
+    </div>
+  </motion.div>
+);
+
 const HeroSection = () => {
   return (
-    <section className="bg-[rgba(14,56,76,1)] relative pt-12 sm:pt-20 pb-20 sm:pb-32  lg:h-[calc(100vh-104px)] lg:max-h-[900px] overflow-hidden">
+    <section className="bg-gradient-to-b from-[#0357b1] to-[#046ddd] relative pt-12 sm:pt-20 pb-20 sm:pb-32  lg:h-[calc(100vh-104px)] lg:max-h-[900px] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center z-10">
           {/* Left: Content */}
@@ -18,8 +84,10 @@ const HeroSection = () => {
             className="space-y-8"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-onest md:leading-[67.2px]">
-              Exceptional dental<br />
-              care for every stage<br />
+              Exceptional dental
+              <br />
+              care for every stage
+              <br />
               of your journey
             </h1>
             <p className="text-base text-white/90 font-onest leading-7 max-w-lg">
@@ -28,52 +96,22 @@ const HeroSection = () => {
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
-              className="flex items-center gap-4 bg-[#1e84b5] text-white px-5 py-4 rounded-2xl text-base font-semibold font-onest leading-none"
+              className="flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group"
             >
               Book Appointment
-              <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">
-                <path d="M1 7H15M15 7L9 1M15 7L9 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaArrowRight className="text-secondary group-hover:text-white" />
             </motion.button>
             <hr className="my-6 border-white/10" />
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-stretch flex-wrap sm:flex-nowrap justify-between gap-4"
-            >
-              <div className="grow flex items-center  gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <FaUserMd className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-onest leading-snug">
-                    Experience<br />Doctor
-                  </p>
-                </div>
-              </div>
-              <div className="grow flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <FaHandHoldingMedical className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-onest leading-snug">
-                    Personalized<br />Care
-                  </p>
-                </div>
-              </div>
-              <div className="grow flex items-center gap-4 p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <FaWallet className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-onest leading-snug">
-                    Flexible<br />Payment Option
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+            {/* Features with animated hover */}
+            <div className="flex items-stretch flex-wrap sm:flex-nowrap justify-between gap-4">
+              {features.map((feature, idx) => (
+                <FeatureCard
+                  key={idx}
+                  icon={feature.icon}
+                  label={feature.label}
+                />
+              ))}
+            </div>
           </motion.div>
 
           {/* Right: Image Grid */}
@@ -128,12 +166,12 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </Container>
-           {/* Vector Image at Bottom */}
-        <Image
-          src={VectorImg}
-          alt="Decorative Vector"
-          className="absolute bottom-0 left-0 w-full h-48 lg:h-auto object-cover  pointer-events-none select-none z-20"
-        />
+      {/* Vector Image at Bottom */}
+      <Image
+        src={VectorImg}
+        alt="Decorative Vector"
+        className="absolute bottom-0 left-0 w-full h-48 lg:h-auto object-cover  pointer-events-none select-none z-20"
+      />
     </section>
   );
 };

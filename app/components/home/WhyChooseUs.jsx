@@ -28,8 +28,8 @@ const stats = [
     label: "Years Of Experience",
     value: (
       <>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">20</span>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">+</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">20</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">+</span>
       </>
     ),
     index: "01",
@@ -38,8 +38,8 @@ const stats = [
     label: "Happy Patients",
     value: (
       <>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">5</span>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">M+</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">5</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">M+</span>
       </>
     ),
     index: "02",
@@ -48,8 +48,8 @@ const stats = [
     label: "Treatment Completed",
     value: (
       <>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">986</span>
-        <span className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px]">+</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">986</span>
+        <span className="text-primary text-[40px] font-bold font-onest leading-[48px]">+</span>
       </>
     ),
     index: "03",
@@ -74,12 +74,12 @@ const WhyChooseFeature = ({ icon, title, description, isLast }) => (
 
 const WhyChooseStat = ({ label, value, index, showDivider }) => (
   <div className="flex-1 min-w-[220px] lg:min-w-auto flex flex-col gap-5 divide-[#0e384c]/10">
-    <div className="text-[#0e384c] text-sm font-normal font-onest leading-relaxed mb-2">{index}</div>
+    <div className="text-primary text-sm font-normal font-onest leading-relaxed mb-2">{index}</div>
     <div className="flex flex-col gap-2.5">
       <div className="flex items-start h-12">
         <div className="flex  justify-center items-center">{value}</div>
       </div>
-      <div className="text-[#0e384c] text-xl font-semibold font-onest leading-normal">{label}</div>
+      <div className="text-primary text-xl font-semibold font-onest leading-normal">{label}</div>
     </div>
   </div>
 );
@@ -123,15 +123,15 @@ const WhyChooseUs = () => (
             transition={{ duration: 0.7 }}
             className="flex items-center gap-2 mb-2"
           >
-            <TbDental className="text-[#1e84b5]" size={20} />
-            <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">Why Choose Us</span>
+            <TbDental className="text-secondary" size={20} />
+            <span className="text-secondary text-sm font-semibold font-onest leading-none">Why Choose Us</span>
           </motion.div>
           {/* Heading */}
           <motion.h2
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2"
+            className="text-primary text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2"
           >
             Exceptional dental care tailored to your needs
           </motion.h2>
@@ -140,7 +140,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="text-[#0e384c] text-base font-bold font-onest leading-7 mb-2"
+            className="text-primary text-base font-bold font-onest leading-7 mb-2"
           >
             We take the time to understand your individual needs and goals, creating customized treatment plans to help you achieve optimal oral health.
           </motion.p>
