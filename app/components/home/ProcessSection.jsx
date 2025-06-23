@@ -81,7 +81,7 @@ const ProcessSection = () => (
           {/* Button */}
           <motion.button
             whileHover={{ scale: 1.04 }}
-            className="mt-2 flex items-center gap-3 bg-secondary rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all w-fit"
+            className="mt-2 cursor-pointer flex items-center gap-3 bg-secondary rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all w-fit"
           >
             Get In Touch
             <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">

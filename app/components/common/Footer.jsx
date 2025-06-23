@@ -23,15 +23,15 @@ const services = [
 const contactInfo = [
   {
     icon: <FaPhoneAlt className="w-5 h-5 text-white" />,
-    value: "+1 809 120 6705",
+    value: "+97126393677",
   },
   {
     icon: <HiOutlineMail className="w-5 h-5 text-white" />,
-    value: "info@domain.com",
+    value: "info@psdc.com",
   },
   {
     icon: <FaMapMarkerAlt className="w-5 h-5 text-white" />,
-    value: "843, Apple LanePeoria",
+    value: "Al Khalidiyah- Abu Dhabi - United Arab Emirates",
   },
 ];
 
@@ -45,7 +45,7 @@ const Footer = () => (
         </h2>
         <a
           href="/contact"
-          className="w-fit flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group"
+          className="w-fit flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group cursor-pointer"
         >
           Book Appointment
           <FaArrowRight className="text-secondary group-hover:text-white" />
@@ -62,13 +62,13 @@ const Footer = () => (
             The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and specialist dental treatments.
           </p>
           <div className="flex gap-4">
-            <a href="#" aria-label="Facebook" className="text-white text-lg hover:text-secondary transition">
+            <a href="https://www.facebook.com/psdc.org/" aria-label="Facebook" target="_blank" className="text-white text-lg hover:text-secondary transition">
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="Instagram" className="text-white text-lg hover:text-secondary transition">
+            <a href="https://www.instagram.com/pearly.smile/?hl=en" aria-label="Instagram" target="_blank" className="text-white text-lg hover:text-secondary transition">
               <FaInstagram />
             </a>
-            <a href="#" aria-label="LinkedIn" className="text-white text-lg hover:text-secondary transition">
+            <a href="https://www.linkedin.com/company/pearly-smile-dental-center" aria-label="LinkedIn" target="_blank" className="text-white text-lg hover:text-secondary transition">
               <FaLinkedinIn />
             </a>
           </div>

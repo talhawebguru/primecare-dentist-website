@@ -115,7 +115,7 @@ const AboutSection = () => (
               ))}
             </div>
             {/* Years of Experience */}
-            <div className="flex flex-col items-start bg-primary rounded-[30px] p-8 min-w-[180px] max-w-[220px]">
+            <div className="flex flex-col items-start bg-secondary rounded-[30px] p-8 min-w-[180px] max-w-[220px]">
               <div className="mb-4 bg-white rounded-xl flex items-center justify-center w-14 h-14">
                 <FaUserMd className="text-secondary" size={48} />
               </div>
@@ -130,7 +130,7 @@ const AboutSection = () => (
           {/* Read More Button */}
           <motion.button
             whileHover={{ scale: 1.04 }}
-            className="mt-4 inline-flex items-center w-fit gap-3 bg-secondary rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all"
+            className="mt-4 inline-flex items-center w-fit gap-3 bg-secondary rounded-[14px] px-7 py-[17px] text-white text-base font-semibold font-onest leading-[17.6px] transition-all cursor-pointer"
           >
             Read More
             <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">

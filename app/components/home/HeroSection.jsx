@@ -96,7 +96,7 @@ const HeroSection = () => {
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
-              className="flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group"
+              className="flex items-center gap-3 px-6 py-4 bg-white rounded-[14px] outline outline-white/10 text-secondary text-base font-semibold font-onest leading-[17.6px] transition hover:bg-secondary hover:text-white hover:outline-white hover:outline hover:scale-110 hover:shadow-lg group cursor-pointer"
             >
               Book Appointment
               <FaArrowRight className="text-secondary group-hover:text-white" />

@@ -10,17 +10,17 @@ const contactInfo = [
   {
     icon: <FaPhoneAlt className="text-white w-6 h-6" />,
     label: "Contact Details",
-    value: "+01-787-582-568",
+    value: "+97126393677",
   },
   {
     icon: <FaMapMarkerAlt className="text-white w-6 h-6" />,
     label: "Address",
-    value: "403, Port Washington Road, Canada",
+    value: "Al Khalidiyah- Abu Dhabi - United Arab Emirates",
   },
   {
     icon: <HiOutlineMail className="text-white w-6 h-6" />,
     label: "Email Us",
-    value: "info@domain.com",
+    value: "info@psdc.com",
   },
 ];
 
@@ -81,7 +81,7 @@ const ContactSection = () => (
       <div className="w-full flex justify-center">
         <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden lg:grayscale-100 hover:grayscale-0 transition-all duration-300">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59494340.433865815!2d-17.36567890000003!3d24.476919300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665d7e1cf441%3A0x457a86d182f2a723!2sPearly%20Smile%20Dental%20Center%20LLC%20Khalidiya%20Abu%20Dhabi!5e0!3m2!1sen!2s!4v1750676849276!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89585.1251456182!2d54.3186174388773!3d24.50111566632959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665d7e1cf441%3A0x457a86d182f2a723!2sPearly%20Smile%20Dental%20Center%20LLC%20Khalidiya%20Abu%20Dhabi!5e0!3m2!1sen!2s!4v1750684300794!5m2!1sen!2s"
             width="100%"
             height="500"
             allowFullScreen=""
@@ -89,6 +89,7 @@ const ContactSection = () => (
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full h-[500px] border-0"
             title="Google Map"
+            zoom="16"
           ></iframe>
         </div>
       </div>

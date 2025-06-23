@@ -48,10 +48,10 @@ const ServiceCard = ({ icon, title, description, index }) => (
         </div>
       </div>
       {/* Learn More */}
-      <button className="mt-5 flex items-center gap-2 text-secondary text-base font-semibold font-onest leading-relaxed rounded-[5px] hover:underline transition-all">
+      <button className="mt-5 cursor-pointer flex items-center gap-2 text-secondary text-base font-semibold font-onest leading-relaxed rounded-[5px] hover:underline transition-all">
         Learn More
         <svg className="w-4 h-3.5" viewBox="0 0 16 14" fill="none">
-          <path d="M1 7H15M15 7L9 1M15 7L9 13" stroke="#1e84b5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M1 7H15M15 7L9 1M15 7L9 13" stroke="#046DDD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </button>
     </div>
