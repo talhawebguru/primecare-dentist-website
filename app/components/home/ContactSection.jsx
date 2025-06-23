@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { motion } from "motion/react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -64,9 +64,11 @@ const ContactSection = () => (
           Get in touch with us
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7">
-          The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and
+          The goal of our clinic is to provide friendly, caring dentistry and
+          the highest level of general, cosmetic, and
           <br className="hidden md:block" />
-          specialist dental treatments. With dental practices throughout the world.
+          specialist dental treatments. With dental practices throughout the
+          world.
         </p>
       </div>
       {/* Contact Cards */}
@@ -77,9 +79,9 @@ const ContactSection = () => (
       </div>
       {/* Map */}
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden grayscale-100 hover:grayscale-0 transition-all duration-300">
+        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden lg:not-only:grayscale-100 hover:grayscale-0 transition-all duration-300">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645645201013!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59494340.433865815!2d-17.36567890000003!3d24.476919300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665d7e1cf441%3A0x457a86d182f2a723!2sPearly%20Smile%20Dental%20Center%20LLC%20Khalidiya%20Abu%20Dhabi!5e0!3m2!1sen!2s!4v1750676849276!5m2!1sen!2s"
             width="100%"
             height="500"
             allowFullScreen=""
