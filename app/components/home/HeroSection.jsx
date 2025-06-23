@@ -73,7 +73,7 @@ const FeatureCard = ({ icon, label }) => (
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b from-[#0357b1] to-[#046ddd] relative pt-12 sm:pt-20 pb-20 sm:pb-32  lg:h-[calc(100vh-104px)] lg:max-h-[900px] overflow-hidden">
+    <section className="bg-gradient-to-b from-[#0357b1] to-[#046ddd] relative pt-12 sm:pt-20 pb-20 sm:pb-32  lg:h-[calc(100vh-104px)] lg:min-h-fit lg:max-h-[900px] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center z-10">
           {/* Left: Content */}
