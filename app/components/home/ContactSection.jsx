@@ -79,7 +79,7 @@ const ContactSection = () => (
       </div>
       {/* Map */}
       <div className="w-full flex justify-center">
-        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden lg:not-only:grayscale-100 hover:grayscale-0 transition-all duration-300">
+        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden lg:grayscale-100 hover:grayscale-0 transition-all duration-300">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59494340.433865815!2d-17.36567890000003!3d24.476919300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665d7e1cf441%3A0x457a86d182f2a723!2sPearly%20Smile%20Dental%20Center%20LLC%20Khalidiya%20Abu%20Dhabi!5e0!3m2!1sen!2s!4v1750676849276!5m2!1sen!2s"
             width="100%"
