@@ -73,7 +73,7 @@ const WhyChooseFeature = ({ icon, title, description, isLast }) => (
 );
 
 const WhyChooseStat = ({ label, value, index, showDivider }) => (
-  <div className="flex-1  flex flex-col gap-5 divide-[#0e384c]/10">
+  <div className="flex-1 min-w-[220px] lg:min-w-auto flex flex-col gap-5 divide-[#0e384c]/10">
     <div className="text-[#0e384c] text-sm font-normal font-onest leading-relaxed mb-2">{index}</div>
     <div className="flex flex-col gap-2.5">
       <div className="flex items-start h-12">
@@ -85,10 +85,10 @@ const WhyChooseStat = ({ label, value, index, showDivider }) => (
 );
 
 const WhyChooseUs = () => (
-  <section className="relative bg-[#f9fcff] overflow-x-hidden overflow-x-hidden">
+  <section className="relative bg-[#f9fcff] overflow-hidden">
       <div className="flex flex-col lg:flex-row w-full min-h-[700px]">
         {/* Left: Image with overlayed glassmorphism card */}
-        <div className="relative flex-1 flex items-center justify-center min-h-[500px]">
+        <div className="order-2 lg:order-1 relative flex-1 flex items-center justify-center min-h-[500px]">
           <Image
             src="/images/why-choose-bg-img.jpg"
             alt="Dentist with patient"
@@ -101,7 +101,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative z-10 w-full max-w-[540px] mx-auto px-[40px] py-[80px] bg-white/10 rounded-[50px] outline outline-1 outline-white/10 backdrop-blur-[10px] flex flex-col gap-[30px]"
+            className="relative z-10 w-[400px] m-5 md:m-0  sm:w-full max-w-[540px] mx-auto px-5 py-5 md:px-[40px] md:py-[80px] bg-white/10 rounded-[50px] outline outline-white/10 backdrop-blur-[10px] flex flex-col gap-[30px]"
           >
             {features.map((feature, idx) => (
               <WhyChooseFeature
@@ -112,10 +112,10 @@ const WhyChooseUs = () => (
             ))}
           </motion.div>
           {/* Overlay for darken effect */}
-          <div className="absolute inset-0 bg-black/20 rounded-[0px] lg:rounded-l-[0px] z-0" />
+          <div className="absolute inset-0 bg-black/20 rounded-[0px] lg:rounded-l-[0px] z-0 " />
         </div>
         {/* Right: Content */}
-        <div className="flex-1 flex flex-col justify-center px-0 lg:px-[80px] py-12 lg:py-0 bg-[#f9fcff]">
+        <div className="order-1 lg:order-2 flex-1 flex flex-col justify-center lg:px-[80px] py-12 lg:py-0 px-3 bg-[#f9fcff]">
           {/* Section Title */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -131,7 +131,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-2"
+            className="text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2"
           >
             Exceptional dental care tailored to your needs
           </motion.h2>
@@ -158,7 +158,7 @@ const WhyChooseUs = () => (
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="flex flex-row flex-wrap gap-10  justify-between gap-0 divide-x divide-[#0e384c]/10 bg-transparent"
+            className="flex flex-wrap gap-10 justify-between sm:divide-x sm:divide-[#0e384c]/10 bg-transparent"
           >
             {stats.map((stat, idx) => (
               <WhyChooseStat
