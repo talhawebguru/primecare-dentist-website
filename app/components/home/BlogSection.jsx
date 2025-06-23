@@ -41,19 +41,19 @@ const BlogCard = ({ post, index }) => (
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="bg-white rounded-[40px] outline outline-[#0e384c]/5 p-[21px] flex items-start gap-6 w-full h-[281px] min-w-[320px] max-w-full"
+    className="bg-white rounded-[40px] outline outline-[#0e384c]/5 p-[20px] flex flex-col lg:flex-row items-start gap-6 w-full max-w-full"
   >
-    <div className="rounded-[40px] overflow-hidden min-w-[291.5px] max-w-[291.5px] h-[239px] flex items-center">
+    <div className="flex-1 rounded-[40px] overflow-hidden w-full flex items-center">
       <Image
         src={post.image}
         alt={post.title}
         width={291}
         height={239}
-        className="object-cover w-[291.5px] h-[239px]"
+        className="object-cover w-full "
         priority={index === 0}
       />
     </div>
-    <div className="flex flex-col justify-center items-start flex-1 pl-5">
+    <div className="flex-1 flex flex-col justify-center items-start pl-0 lg:pl-5 w-full">
       <h3 className="text-[#0e384c] text-xl font-semibold font-onest leading-normal mb-2 whitespace-pre-line">
         {post.title}
       </h3>
@@ -73,16 +73,16 @@ const BlogCard = ({ post, index }) => (
 );
 
 const BlogSection = () => (
-  <section className="py-[100px] bg-[#f8fbff] overflow-x-hidden">
+  <section className="py-12 sm:py-[100px] bg-[#f8fbff] overflow-x-hidden">
     <Container>
       <div className="flex flex-col items-center mb-12">
-        <div className="flex items-center ga-2 mb-2">
+        <div className="flex items-center gap-2 mb-2">
           <TbDental className="text-[#1e84b5]" size={20} />
           <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
             Blog & Articles
           </span>
         </div>
-        <h2 className="text-center text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-2">
+        <h2 className="text-center text-[#0e384c] text-3xl sm:text-[40px] font-bold font-onest sm:leading-[48px] mb-2">
           Our latest dental tips and news
         </h2>
         <p className="text-center text-[#527282] text-base font-normal font-onest leading-7 max-w-2xl">
@@ -91,15 +91,24 @@ const BlogSection = () => (
           specialist dental treatments. With dental practices throughout the world.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {posts.slice(0, 2).map((post, idx) => (
-          <BlogCard key={post.title} post={post} index={idx} />
-        ))}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        {posts.slice(2, 4).map((post, idx) => (
-          <BlogCard key={post.title} post={post} index={idx + 2} />
-        ))}
+      {/* Responsive: stack all cards on mobile, 2 columns on md+, 2 rows on lg+ */}
+      <div className="flex flex-col gap-8 w-full">
+        <div className="flex flex-col md:flex-row gap-8 w-full">
+          <div className="flex-1 min-w-0">
+            <BlogCard post={posts[0]} index={0} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <BlogCard post={posts[1]} index={1} />
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row gap-8 w-full">
+          <div className="flex-1 min-w-0">
+            <BlogCard post={posts[2]} index={2} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <BlogCard post={posts[3]} index={3} />
+          </div>
+        </div>
       </div>
     </Container>
   </section>
