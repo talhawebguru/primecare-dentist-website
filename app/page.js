@@ -9,6 +9,7 @@ import BlogSection from './components/home/BlogSection';
 import ContactSection from './components/home/ContactSection';
 import ContactInfoBar from "./components/home/ContactInfoBar";
 import WhyChooseUs from "./components/home/WhyChooseUs";
+import Footer from "./components/common/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <TeamSection />
       <BlogSection />
       <ContactSection />
+      <Footer />
     </>
   );
 }

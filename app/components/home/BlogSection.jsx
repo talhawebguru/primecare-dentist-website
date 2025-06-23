@@ -76,7 +76,7 @@ const BlogSection = () => (
   <section className="py-[100px] bg-[#f8fbff]">
     <Container>
       <div className="flex flex-col items-center mb-12">
-        <div className="flex items-center mb-2">
+        <div className="flex items-center ga-2 mb-2">
           <TbDental className="text-[#1e84b5]" size={20} />
           <span className="text-[#1e84b5] text-sm font-semibold font-onest leading-none">
             Blog & Articles

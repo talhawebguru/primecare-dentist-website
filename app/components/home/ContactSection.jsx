@@ -1,74 +1,97 @@
 'use client';
 import { motion } from "motion/react";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 import Container from "../common/Container";
+import { TbDental } from "react-icons/tb";
 
-const ContactSection = () => {
-  return (
-    <section className="py-20">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
-          >
-            <div className="w-12 h-12 bg-[#0075FF] rounded-full flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-[#1E3547] mb-2">Phone Number</h3>
-            <p className="text-gray-600">+1 (555) 123-4567</p>
-          </motion.div>
+const contactInfo = [
+  {
+    icon: <FaPhoneAlt className="text-white w-6 h-6" />,
+    label: "Contact Details",
+    value: "+01-787-582-568",
+  },
+  {
+    icon: <FaMapMarkerAlt className="text-white w-6 h-6" />,
+    label: "Address",
+    value: "403, Port Washington Road, Canada",
+  },
+  {
+    icon: <HiOutlineMail className="text-white w-6 h-6" />,
+    label: "Email Us",
+    value: "info@domain.com",
+  },
+];
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
-          >
-            <div className="w-12 h-12 bg-[#0075FF] rounded-full flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-[#1E3547] mb-2">Email Address</h3>
-            <p className="text-gray-600">info@primecaredental.com</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white p-6 rounded-lg shadow-lg"
-          >
-            <div className="w-12 h-12 bg-[#0075FF] rounded-full flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-[#1E3547] mb-2">Office Address</h3>
-            <p className="text-gray-600">123 Dental Street, City, State 12345</p>
-          </motion.div>
+const ContactCard = ({ icon, label, value, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay }}
+    className="flex-1 min-w-[300px] max-w-[420px] bg-white rounded-[30px] outline outline-1 outline-[#0e384c]/5 p-[21px] flex flex-col justify-center"
+  >
+    <div className="flex items-center">
+      <div className="pr-[15px]">
+        <div className="p-2.5 bg-[#1e84b5] rounded-xl flex items-center justify-center">
+          {icon}
         </div>
+      </div>
+      <div>
+        <div className="text-[#0e384c] text-xl font-semibold font-onest capitalize leading-normal">
+          {label}
+        </div>
+        <div className="text-[#527282] text-base font-normal font-onest leading-7 mt-1">
+          {value}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+);
 
-        <div className="mt-12">
+const ContactSection = () => (
+  <section className="pt-[50px] pb-[100px] bg-[#f8fbff]">
+    <Container>
+      {/* Section Header */}
+      <div className="flex flex-col items-center max-w-[820px] mx-auto pb-5">
+        <div className="flex items-center gap-2 mb-2">
+          <TbDental className="text-[#1e84b5]" size={20} />
+          <span className="text-[#1e84b5] text-sm font-semibold font-onest capitalize leading-none">
+            Contact Us
+          </span>
+        </div>
+        <h2 className="text-center text-[#0e384c] text-[40px] font-bold font-onest leading-[48px] mb-2">
+          Get in touch with us
+        </h2>
+        <p className="text-center text-[#527282] text-base font-normal font-onest leading-7">
+          The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and
+          <br className="hidden md:block" />
+          specialist dental treatments. With dental practices throughout the world.
+        </p>
+      </div>
+      {/* Contact Cards */}
+      <div className="w-full flex flex-col md:flex-row gap-[30px] justify-center items-stretch mb-10">
+        {contactInfo.map((info, idx) => (
+          <ContactCard key={info.label} {...info} delay={idx * 0.1} />
+        ))}
+      </div>
+      {/* Map */}
+      <div className="w-full flex justify-center">
+        <div className="w-full max-w-[1280px] rounded-[40px] overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645645201013!5m2!1sen!2s"
             width="100%"
-            height="400"
-            style={{ border: 0 }}
+            height="500"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-lg shadow-lg"
+            className="w-full h-[500px] border-0"
+            title="Google Map"
           ></iframe>
         </div>
-      </Container>
-    </section>
-  );
-};
+      </div>
+    </Container>
+  </section>
+);
 
 export default ContactSection;
