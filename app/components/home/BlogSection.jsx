@@ -50,7 +50,6 @@ const BlogCard = ({ post, index }) => (
         width={291}
         height={239}
         className="object-cover w-full "
-        priority={index === 0}
       />
     </div>
     <div className="flex-1 flex flex-col justify-center items-start pl-0 lg:pl-5 w-full">

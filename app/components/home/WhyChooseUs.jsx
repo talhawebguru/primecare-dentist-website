@@ -94,7 +94,6 @@ const WhyChooseUs = () => (
             alt="Dentist with patient"
             fill
             className="object-cover rounded-[0px] lg:rounded-l-[0px] z-0"
-            priority
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
           <motion.div

@@ -6,23 +6,23 @@ import { TbDental } from "react-icons/tb";
 
 const team = [
   {
-    name: "Dr.Rohini Joe",
-    role: "Senior Chauffeur",
+    name: "Dr. Alaa Alwafaie",
+    role: "GP Dentist",
     image: "/images/team/team-1.png",
   },
   {
-    name: "Taylor Smith",
-    role: "City Tour Guide",
+    name: "Dr. Rama Sharfo",
+    role: "GP Dentist",
     image: "/images/team/team-2.png",
   },
   {
-    name: "Jordan Brown",
-    role: "Distance Driver",
+    name: "Dr. Mohamed Bilal Abdulsamad",
+    role: "Senior Orthodontist",
     image: "/images/team/team-3.png",
   },
   {
-    name: "Jacob Jones",
-    role: "Dentist",
+    name: "Dr. Sara Yousef",
+    role: "GP Dentist",
     image: "/images/team/team-4.png",
   },
 ];
@@ -42,7 +42,7 @@ const TeamCard = ({ member, index }) => (
           width={297}
           height={357}
           className="w-[297.5px] h-[357px] object-cover"
-          priority={index === 0}
+          quality={100}
         />
       </div>
     </div>
@@ -66,7 +66,7 @@ const TeamSection = () => (
         {/* Section Header */}
         <div className="w-full max-w-[845px] pb-5 flex flex-col items-center mx-auto relative">
           {/* Our Team label */}
-          <div className="flex items-center mb-2">
+          <div className="flex items-center gap-2 mb-2">
             <TbDental className="text-secondary" size={20} />
             <span className="text-secondary text-sm font-semibold font-onest leading-none">Our Team</span>
           </div>

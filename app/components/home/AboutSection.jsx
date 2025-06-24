@@ -48,7 +48,6 @@ const AboutSection = () => (
             width={590}
             height={655}
             className="rounded-[40px] object-cover w-full h-auto"
-            priority
           />
           {/* Happy Patients Badge */}
           <div className="absolute left-12 bottom-16 w-[175px]">
