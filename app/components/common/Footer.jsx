@@ -56,7 +56,7 @@ const Footer = () => (
         {/* Brand & Description */}
         <div className="flex-1 min-w-[220px] max-w-[400px]">
           <div className="flex items-center gap-2 mb-4">
-            <Image src={FooterLogo} alt="Primecare Logo"  className="hover:scale-125 " />
+            <Image src={FooterLogo} alt="Primecare Logo"  className="hover:scale-125 invert brightness-0 " />
           </div>
           <p className="text-white text-base font-normal font-onest leading-7 mb-6">
             The goal of our clinic is to provide friendly, caring dentistry and the highest level of general, cosmetic, and specialist dental treatments.
