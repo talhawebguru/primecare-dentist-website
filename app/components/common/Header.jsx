@@ -30,7 +30,7 @@ const Header = () => {
               alt="Logo"
               width={240}
               height={50}
-              className="w-[75px] h-auto"
+              className=" h-auto"
               priority
             />
           </Link>
@@ -68,7 +68,7 @@ const Header = () => {
             aria-label="Open menu"
             onClick={() => setMobileOpen(true)}
           >
-            <HiMenu className="w-8 h-8" />
+            <HiMenu className="w-8 h-8 text-secondary" />
           </button>
         </nav>
       </Container>
